@@ -1,0 +1,23 @@
+.fixed-box {
+    top: 50%;
+    right: 8rem;
+    transform: translateY(-50%);
+}
+
+.li-item:first-child {
+    margin-top: 0.25rem;
+}
+
+.li-item:last-child {
+    margin-bottom: 0.25rem;
+}
+
+.list-item-content {
+    text-align: center;
+    flex: 1 1 0%;
+}
+
+.divider {
+    border-right-width: 1px;
+    border-color: rgb(156, 163, 175);
+}

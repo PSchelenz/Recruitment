@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/31.0.0/classic/ckeditor.js"></script>
+</head>
+<style>
+    ul {
+        list-style: circle;
+    }
+</style>
+<body>
+    <header>
+        <nav class="flex justify-center bg-indigo-600">
+            <div class="flex items-center justify-center sm:justify-start nav-wrapper w-3/5">
+                <span class="iconify text-white" data-icon="cib:mail-ru"></span>
+                <div class="logo py-4 text-white font-bold text-lg">
+                    GreatMail
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="flex justify-start pt-4 sm:mt-10 px-32">
+            <div>
+                <div>
+                    <span class="iconify mx-auto" data-icon="fa-solid:mail-bulk" data-width="50px"></span>
+                    <h2 class="mt-6 text-center text-3xl font-bold text-gray-700">
+                        Create Page
+                    </h2>
+                </div>
+                <div class="max-w-4xl w-full px-10 pb-10 pt-3 mt-6 border rounded-xl shadow-lg">
+                    <form method="POST" action="#" class="space-y-6" >
+                        <input type="hidden" name="remember" value="true">
+                        <div class="space-y-4 mx-auto w-5/6">
+                            <div class="flex relative">
+                                <label for="prefix" class="text-indigo-500 font-semibold mr-3">Prefix:</label>
+                                <input id="prefix" name="prefix" type="text" class="border border-indigo-300 rounded-lg w-1/5 pl-2 py-1 mr-5 focus:placeholder-transparent focus:outline-none" placeholder="/example" required>
+                                <label for="title" class="text-indigo-500 font-semibold mr-3">Title:</label>
+                                <input id="title" name="title" type="text" size="255" class="border border-indigo-300 rounded-lg w-full pl-2 py-1 focus:placeholder-transparent focus:outline-none" placeholder="My Title" required>
+                            </div>
+                            <div class="flex relative">
+                                <label for="header-title" class="text-indigo-500 font-semibold mr-5 whitespace-nowrap">Head title:</label>
+                                <input id="header-title" name="header-title" size="255" type="text" autocomplete="text" class="border border-indigo-300 rounded-lg w-full pl-2 py-1 focus:placeholder-transparent focus:outline-none" placeholder="My head title" required>
+                            </div>
+                        </div>    
+                        <div>
+                            <label for="title" class="text-indigo-500 font-semibold mr-3 mt-3">Body:</label>
+                            <div class="relative border border-indigo-300 rounded">
+                                <textarea id="body"></textarea>
+                            </div>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full py-2 px-4 border border-transparent text-sm font-medium rounded-xl text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                Register
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="fixed w-1/4 h-1/2 right-0 p-10 border rounded-xl shadow-lg ml-3 fixed-box">
+            <div id="preview-head" class="text-2xl text-center mb-6">
+                
+            </div>
+            <div id="preview-body" class="mx-6">
+                
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="flex text-sm justify-center mt-24">
+            Created by <strong class="pl-1">Piotr Schelenz</strong>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        const editor = ClassicEditor
+            .create(document.querySelector('#body'))
+            .then(editor => {
+                console.log(editor)
+            })
+            .catch(error => {
+                console.error(error)
+            })
+    </script>
+
+    <script>
+        const prev_head = document.querySelector('#preview-head');
+        const prev_body = document.querySelector('#preview-body');
+        const header_title = document.querySelector('#header-title');
+        const body = document.querySelector('.ck-content')
+
+        header_title.addEventListener('input', function(event) {
+            const target = event.target;
+
+            document.querySelector('#preview-head').innerHTML = target.value;
+        });
+
+        body.addEventListener('input', function(event) {
+            const target = event.target;
+
+            document.querySelector('#preview-body').innerHTML = target.innerHTML;
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+    "name": "EmailMessages",
+    "alias": "emailmessages",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\EmailMessages\\Providers\\EmailMessagesServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

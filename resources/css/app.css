@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ck-content h1 {
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+#preview-body h1 {
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+.ck-content h2 {
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+#preview-body h2 {
+    font-size: 1.17em;
+    font-weight: bolder;
+}
+
+.ck-content h3 {
+    font-size: 1.17em;
+    font-weight: bolder;
+}
+
+#preview-body h3 {
+    font-size: 1em;
+    font-weight: bolder;
+}
+.ck-content h4 {
+    font-size: 1em;
+    font-weight: bolder;
+}
+
+#preview-body h4 {
+    font-size: 0.83em;
+    font-weight: bolder;
+}
+
+.ck-content h5 {
+    font-size: .83em;
+    font-weight: bolder;
+}
+
+#preview-body h5 {
+    font-size: .67em;
+    font-weight: bolder;
+}
+
+.ck-content h6 {
+    font-size: .67em;
+    font-weight: bolder;
+}
+
+#preview-body h6 {
+    font-size: .4em;
+    font-weight: bolder;
+}
+
+#preview-body p {
+    font-size: .67em;
+    font-weight: normal;
+}
+
+.ck-content ul, #preview-body ul {
+    list-style: circle;
+    padding-left: 40px;
+}
+
+.ck-content ol, #preview-body ol {
+    list-style: decimal;
+    padding-left: 40px;
+}
+
+.ck-content a, #preview-body a {
+    color: cornflowerblue;
+    text-decoration: underline;
+    text-underline: cornflowerblue;
+}
+
+.ck-content a:hover, #preview-body a:hover {
+    cursor: pointer;
+}
+
+.li-item:first-child {
+    margin-top: 0.25rem;
+}
+
+.li-item:last-child {
+    margin-bottom: 0.25rem;
+}
+
+.list-item-content {
+    text-align: center;
+    flex: 1 1 0%;
+}
+
+.divider {
+    border-right-width: 1px;
+    border-color: rgb(156, 163, 175);
+}
+
+@media screen and (min-width: 576px) {
+    .fixed-box {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

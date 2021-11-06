@@ -1,0 +1,13 @@
+{
+    "name": "PageCreation",
+    "alias": "pagecreation",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\PageCreation\\Providers\\PageCreationServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
