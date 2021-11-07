@@ -1,5 +1,7 @@
 <x-layout>
-    <x-slot name="title">Email message</x-slot>
+    <x-slot name="title">
+        <title>Email message</title>
+    </x-slot>
 
     <div class="flex justify-center pt-4 sm:mt-10">
         <div class="max-w-4xl w-full p-10 border rounded-xl shadow-lg">
@@ -13,7 +15,7 @@
                 @csrf
                 <div class="rounded-md shadow-sm space-y-4 mx-auto xl:w-2/5">
                     <div class="relative border border-indigo-300 rounded-lg">
-                        <input id="email_from" name="email_from" type="email" class="rounded-lg w-full pl-2 py-1 border-none focus:placeholder-transparent focus:outline-none" placeholder="example@example.com" required>
+                        <input id="email_from" name="email_from" type="email" value="{{ auth()->user()->email}}" class="rounded-lg w-full pl-2 py-1 border-none focus:placeholder-transparent focus:outline-none" placeholder="example@example.com" required>
                         <label for="email_from" class="absolute -top-3 left-4 bg-white text-sm font-bold px-1">From:</label>
                     </div>
                     @error('email_from')

@@ -1,5 +1,7 @@
 <x-layout>
-    <x-slot name="title">Create page</x-slot>
+    <x-slot name="title">
+        <title>Create page</title>
+    </x-slot>
 
         <div class="sm:flex justify-center xl:justify-start pt-4 sm:mt-10 xl:px-32">
             <div>

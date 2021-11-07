@@ -31880,7 +31880,7 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.ck-content h1 {
+.ck-content h1, #keep h1 {
   font-size: 2em;
   font-weight: bolder;
 }
@@ -31890,7 +31890,7 @@ video {
   font-weight: bolder;
 }
 
-.ck-content h2 {
+.ck-content h2, #keep h2 {
   font-size: 1.5em;
   font-weight: bolder;
 }
@@ -31900,7 +31900,7 @@ video {
   font-weight: bolder;
 }
 
-.ck-content h3 {
+.ck-content h3, #keep h3 {
   font-size: 1.17em;
   font-weight: bolder;
 }
@@ -31910,7 +31910,7 @@ video {
   font-weight: bolder;
 }
 
-.ck-content h4 {
+.ck-content h4, #keep h4 {
   font-size: 1em;
   font-weight: bolder;
 }
@@ -31920,7 +31920,7 @@ video {
   font-weight: bolder;
 }
 
-.ck-content h5 {
+.ck-content h5, #keep h5 {
   font-size: .83em;
   font-weight: bolder;
 }
@@ -31930,7 +31930,7 @@ video {
   font-weight: bolder;
 }
 
-.ck-content h6 {
+.ck-content h6, #keep h6 {
   font-size: .67em;
   font-weight: bolder;
 }
@@ -31945,23 +31945,37 @@ video {
   font-weight: normal;
 }
 
-.ck-content ul, #preview-body ul {
+#keep p {
+  font-size: .95em;
+  font-weight: normal;
+}
+
+.ck-content ul, #preview-body ul, #keep ul {
   list-style: circle;
   padding-left: 40px;
 }
 
-.ck-content ol, #preview-body ol {
+#preview-body li {
+  font-size: 0.67rem;
+  line-height: 0.67rem;
+}
+
+#keep li {
+  line-height: 0.95rem;
+}
+
+.ck-content ol, #preview-body ol, #keep ol {
   list-style: decimal;
   padding-left: 40px;
 }
 
-.ck-content a, #preview-body a {
+.ck-content a, #preview-body a, #keep a {
   color: cornflowerblue;
   text-decoration: underline;
   text-underline: cornflowerblue;
 }
 
-.ck-content a:hover, #preview-body a:hover {
+.ck-content a:hover, #preview-body a:hover, #keep a:hover {
   cursor: pointer;
 }
 
@@ -31975,7 +31989,7 @@ video {
 
 .list-item-content {
   text-align: center;
-  flex: 1 1 0%;
+  flex: 1 1 0;
 }
 
 .divider {
@@ -31983,10 +31997,18 @@ video {
   border-color: rgb(156, 163, 175);
 }
 
+.hide {
+  display: none;
+}
+
 @media screen and (min-width: 576px) {
   .fixed-box {
     top: 50%;
     transform: translateY(-50%);
+  }
+
+  .hide {
+    display: block;
   }
 }
 

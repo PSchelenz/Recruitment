@@ -1,5 +1,7 @@
 <x-layout>
-    <x-slot name="title">Login</x-slot>
+    <x-slot name="title">
+        <title>Login</title>
+    </x-slot>
     <div class="flex justify-center pt-4 mt-10">
         <div class="max-w-md w-full p-10 border rounded-xl shadow-lg">
             <div>
